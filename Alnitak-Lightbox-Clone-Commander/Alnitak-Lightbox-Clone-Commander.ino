@@ -15,7 +15,7 @@ Changelog:
   of 'OOO\r' to the responses and did not work with NINA.
 2021-12-22
   开发对应上位机，可调整转动角度，可定时
-  Can be controlled by software which has a timing function, rotates at a specific angle as well.
+  Can be controlled by a software which has a timing function, rotates at a specific angle as well.
 
 
 Typical usage on the command prompt:
