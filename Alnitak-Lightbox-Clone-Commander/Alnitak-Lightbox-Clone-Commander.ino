@@ -38,7 +38,7 @@ Recieve  : *D19OOO\n    //confirms light turned off.
 volatile int ledPin = 5;      // the pin that the LED is attached to, needs to be a PWM pin.
 int brightness = 0;
 
-int angle = 90;    //转动角度
+int angle = 90;    //默认开盖一半的角度，具体情况需要考虑舵机类型
 static const int motorPin = 10;  //舵机默认引脚
 int pos;    //移动步长
 int dis;    //移动距离
@@ -137,7 +137,7 @@ void handleSerial()
       break;
 
       /*
-    Open shutter
+    Open shutter          //开盖指令
       Request: >OOOO\n
       Return : *OiiOOO\n
         id = deviceId
@@ -177,7 +177,7 @@ void handleSerial()
       break;
 
       /*
-    Close shutter
+    Close shutter             //关盖指令
       Request: >COOO\n
       Return : *CiiOOO\n
         id = deviceId
@@ -191,7 +191,7 @@ void handleSerial()
       break;
 
     /*
-    Turn light on
+    Turn light on             //打开平场灯
       Request: >LOOO\n
       Return : *LiiOOO\n
         id = deviceId
@@ -204,7 +204,7 @@ void handleSerial()
       break;
 
     /*
-    Turn light off
+    Turn light off          //关闭平场灯
       Request: >DOOO\n
       Return : *DiiOOO\n
         id = deviceId
@@ -217,7 +217,7 @@ void handleSerial()
       break;
 
     /*
-    Set brightness
+    Set brightness            //设置平场灯的亮度
       Request: >Bxxx\n
         xxx = brightness value from 000-255
       Return : *Biiyyy\n
@@ -233,7 +233,7 @@ void handleSerial()
         break;
 
     /*
-    Get brightness
+    Get brightness          //获取平场灯的亮度
       Request: >JOOO\n
       Return : *Jiiyyy\n
         id = deviceId
@@ -245,7 +245,7 @@ void handleSerial()
         break;
       
     /*
-    Get device status:
+    Get device status:              //获取设备信息
       Request: >SOOO\n
       Return : *SidMLC\n
         id = deviceId
