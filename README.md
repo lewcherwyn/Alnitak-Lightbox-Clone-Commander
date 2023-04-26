@@ -1,4 +1,5 @@
 # Alnitak-Lightbox-Clone-Commander天文摄影平场镜头盖
+天文摄影平场镜头盖
 Alnitak Lightbox Clone for Arduino with an advanced commander software  / 一个高级的上位机程序，配合由Arduino打造的伪Alnitak Lightbox平场板使用
 
 Originally from https://github.com/red-man/Alnitak-Lightbox-Clone    /  改造自https://github.com/red-man/Alnitak-Lightbox-Clone
